@@ -1,123 +1,70 @@
-import Image from "next/image";
+import Task from "../../components/Task";
+import React from 'react';
+import { IoIosSettings } from "react-icons/io";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-comic-gradient">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            VolunHero{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-        <div className="flex">
-        <div>
-          <a className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-5"
-          href="/login">
-            Login
-          </a>
-        </div>
-        <div>
-        <a className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          href="/register">
-            Register
-          </a>
-        </div>
+    <div class="flex h-screen bg-comic-gradient">
+      <div class="w-1/3 border-r border-black overflow-y-auto">
+        <h1 className="text-xl text-center mb-5 mt-5">Available Tasks</h1>
+        <div className="flex flex-col pl-10 pr-10">
+          <Task title="Campus Cleanup" description="Join us for a campus cleanup event to help keep our quads looking great!" points="100" location="Myers Quad" />
+          <Task title="Animal Shelter Volunteer" description="Spend time with adorable animals at the local animal shelter and help with feeding and care." points="250" location="Athens Area Humane Society"/>
+          <Task title="Event Setup for UGA Football Game" description="Assist with setting up the stadium for an exciting UGA football game. Help arrange seating, install banners, and ensure everything is ready for the fans." points="300" location="Sanford Stadium"/>
+          <Task title="Athens Soup Kitchen Volunteer" description="Make a difference in the Athens community by volunteering at a local soup kitchen. Assist with meal preparation, serving food to those in need, and cleaning up afterward." points="200" location="Athens Soup Kitchen"/>
+          <Task title="UGA Blood Drive Organizer" description="Organize a blood drive on the UGA campus to help save lives and contribute to the community's health and well-being. Coordinate logistics, recruit donors, and ensure a smooth donation process." points="300" location="UGA Health Center"/>   
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      
+      <div class="w-1/3 border-r border-black overflow-y-auto">
+        <h1 className="text-xl text-center mb-5 mt-5">Completed Tasks</h1>
+        <div className="pl-10 pr-10">
+        <Task title="Food Bank Volunteer" description="Become a vital part of Athens community by volunteering at the Food bank! Volunteers will help the community by connecting neighbors with nourishing food." points="100" location="Food Bank at NorthEast Georgia" completed="true"/>
+        <Task title="Safety Volunteer" description="Help provide extensive support to the survivors of domestic violence. Volunteers will bring energy, enthusiasm, diversity, and new skills to the team!" points="150" location="Project Safe" completed="true"/>
+        </div>
+       <div className="rounded-lg pr-10 pl-12 ml-14 mt-24 border-4 bg-white border-white p-2 text-3xl text-black w-3/4">
+          <h3 className="text-xs">Take on more tasks to help your community and gain more paw points!</h3>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Discover{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find service opportunities near you and get involved.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Serve{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Contribute to the community and make a difference.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Earn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Collect paw points for your service and redeem rewards.
-          </p>
-        </a>
+      <div class="w-1/3 border-r border-black overflow-y-hidden">
+        <div className="h-1/6 border-b-2 pl-4 flex flex-col border-black">
+          <h3 className="mt-3 text-3xl pb-3 flex items-center justify-between pr-5">Good afternoon, Will! <IoIosSettings/></h3>
+          <div className="w-3/4 max-w-md pb-1">
+            <div className="bg-gray-300 rounded-full h-8 overflow-hidden ">
+              <div className="bg-blue-500 h-full w-52">
+                
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row justify-between">
+          <h3 className="flex flex-row  items-center">Hero Level 8 - 73% </h3>
+          <h3 className="flex flew-row items-center">300<FaDiamond /></h3>
+          </div>
+        </div>
+        <div className="h-1/2 border-b-2 flex border-black justify-center items-center">
+          <div>
+          </div>
+          <div class="w-80 h-80 bg-blue-500 rounded-full "></div> 
+        </div>
+        <div className="h-1/3">
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Customize{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Customize your avatar and track your service progress.
-          </p>
-        </a>
+        </div>
+
+
       </div>
-    </main>
+
+
+
+
+
+
+
+    </div>
+
   );
 }
