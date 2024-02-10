@@ -35,6 +35,7 @@ const LoginPage = () => {
     };
 
     return (
+        <main>
         <div className="min-h-screen flex items-center justify-center bg-comic-gradient bg-cover">
             <div className="max-w-md w-full bg-white p-8 rounded shadow-md">
                 <div>
@@ -62,10 +63,17 @@ const LoginPage = () => {
                     >
                         Submit
                     </button>
+                    <button
+                        ahref="/register"
+                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-comic-red hover:bg-comic-darkred focus:outline-none focus:ring-2 bg-red-600 text-white focus:ring-offset-2 focus:ring-indigo-500 mt-4"
+                    >
+                        New? Register Here
+                    </button>
                 </form>
                 {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
             </div>
         </div>
+        </main>
     );
 };
 
