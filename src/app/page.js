@@ -2,6 +2,7 @@ import Task from "../../components/Task";
 import React from 'react';
 import { IoIosSettings } from "react-icons/io";
 import { FaDiamond } from "react-icons/fa6";
+import { MdOutlineEdit } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
           <h3 className="mt-3 text-3xl pb-3 flex items-center justify-between pr-5">Good afternoon, Will! <IoIosSettings/></h3>
           <div className="w-3/4 max-w-md pb-1">
             <div className="bg-gray-300 rounded-full h-8 overflow-hidden ">
+              
               <div className="bg-blue-500 h-full w-52">
                 
               </div>
@@ -46,13 +48,9 @@ export default function Home() {
           <h3 className="flex flew-row items-center">300 <FaDiamond /></h3>
           </div>
         </div>
-        <div className="h-1/2 border-b-2 flex border-black justify-center items-center">
-          <div>
-          </div>
+        <div className="h-3/4 flex justify-center items-center">
+          <MdOutlineEdit className="absolute right-5" />
           <div class="w-80 h-80 bg-blue-500 rounded-full "></div> 
-        </div>
-        <div className="h-1/3 flex flex-row">
-          
         </div>
       </div>
 
