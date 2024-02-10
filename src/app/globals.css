@@ -26,6 +26,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.bg-comic-gradient {
+  background-image: linear-gradient(45deg, #FF6B6B, #FF8E53, #FFAA5B);
+  /* You can customize additional background properties here */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
