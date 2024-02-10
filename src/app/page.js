@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div class="flex h-screen bg-comic-gradient">
       <div class="w-1/3 border-r border-black overflow-y-auto">
-        <h1 className="text-xl text-center mb-5 mt-5">Available Tasks</h1>
+        <h1 className="text-2xl text-center mb-5 mt-5">Available Tasks</h1>
         <div className="flex flex-col pl-10 pr-10">
           <Task title="Campus Cleanup" description="Join us for a campus cleanup event to help keep our quads looking great!" points="100" location="Myers Quad" />
           <Task title="Animal Shelter Volunteer" description="Spend time with adorable animals at the local animal shelter and help with feeding and care." points="250" location="Athens Area Humane Society"/>
@@ -19,7 +19,7 @@ export default function Home() {
 
       
       <div class="w-1/3 border-r border-black overflow-y-auto">
-        <h1 className="text-xl text-center mb-5 mt-5">Completed Tasks</h1>
+        <h1 className="text-2xl text-center mb-5 mt-5">Completed Tasks</h1>
         <div className="pl-10 pr-10">
         <Task title="Food Bank Volunteer" description="Become a vital part of Athens community by volunteering at the Food bank! Volunteers will help the community by connecting neighbors with nourishing food." points="100" location="Food Bank at NorthEast Georgia" completed="true"/>
         <Task title="Safety Volunteer" description="Help provide extensive support to the survivors of domestic violence. Volunteers will bring energy, enthusiasm, diversity, and new skills to the team!" points="150" location="Project Safe" completed="true"/>
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row justify-between">
           <h3 className="flex flex-row  items-center">Hero Level 8 - 73% </h3>
-          <h3 className="flex flew-row items-center">300<FaDiamond /></h3>
+          <h3 className="flex flew-row items-center">300 <FaDiamond /></h3>
           </div>
         </div>
         <div className="h-1/2 border-b-2 flex border-black justify-center items-center">
@@ -51,11 +51,9 @@ export default function Home() {
           </div>
           <div class="w-80 h-80 bg-blue-500 rounded-full "></div> 
         </div>
-        <div className="h-1/3">
-
+        <div className="h-1/3 flex flex-row">
+          
         </div>
-
-
       </div>
 
 
